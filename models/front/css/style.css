@@ -1,0 +1,793 @@
+/*******************************************************************************/
+Template Name: Personal Portfolio Template 
+Template URL: 
+Author: princ-imran 
+Version: 1.0
+/*******************************************************************************
+				TABLE OF CONTENTS
+*******************************************************************************
+                0. Base css
+
+                1. Header area + Slidaer Area Start
+
+                2. About area CSS
+
+                3. ProgressBar CSS
+
+                4. Portfolio area CSS
+
+                5. Testimonial area CSS
+
+                6. Contact area CSS
+
+                7. Footer area CSS
+
+*************************************************************************************/
+
+
+/*---------------------------------------------------
+                    0. Base css
+---------------------------------------------------*/
+
+{
+    margin: 0;
+    padding: 0
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+input:focus, textarea:focus {
+	outline: none
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+	transition: all 0.4s ease 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "StylesBangla", sans-serif;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #666;
+    line-height: 24px;
+    font-size: 14px
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+
+/* Defult Css End */
+
+/*@font-face {
+    font-family: StylesBangla;
+    src: url(fonts/StylesBangla.ttf);
+}*/
+
+
+/*---------------------------------------------------
+        1. Header area + Slidaer Area Start
+---------------------------------------------------*/
+
+.header-area {
+    background-color: green;
+    padding: 20px 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+    position: absolute;
+}
+
+.is-sticky .header-area {
+    background-color: #000;
+}
+
+.sticky-wrapper {
+    position: relative;
+    z-index: 9999;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.mainmenu {
+    float: right;
+    margin-top: 5px;
+}
+
+.mainmenu ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.mainmenu li {
+    display: inline-block;
+}
+
+.mainmenu ul li a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    font-size: 16px
+}
+
+.mainmenu ul li a:hover {
+    color: #fff;
+}
+
+.mainmenu ul li a::before {
+    background-color: #fff;
+    bottom: -4px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+}
+
+.mainmenu ul li a:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-toggle-btn {
+    visibility: hidden;
+}
+
+.slider-area {
+    overflow: hidden
+}
+
+.item {
+    position: relative;
+    z-index: 1;
+    height: 600px;
+}
+
+.item:before {
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.slider-table {
+    width: 100%;
+    height: 100%;
+    display: table
+}
+
+.slider-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sl-cntn {
+    text-align: center;
+}
+
+.sl-cntn h2 {
+	color: #fff;
+	-webkit-animation-duration: .3s!important;
+	animation-duration: .3s!important;
+	-webkit-animation-delay: .3s!important;
+	animation-delay: .3s!important;
+}
+
+.sl-cntn h1 {
+    color: #fff;
+    margin: 0 0 15px;
+    font-size: 44px;
+}
+
+.sl-cntn p {
+    color: #fff;
+    font-size: 16px;
+    -webkit-animation-duration: .3s!important;
+    animation-duration: .3s!important;
+    -webkit-animation-delay: .6s!important;
+    animation-delay: .6s!important;
+}
+
+.slide-btn a {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
+    display: inline-block;
+    border: 3px solid #3CECFF;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 30px;
+    -webkit-animation-duration: .3s!important;
+    animation-duration: .3s!important;
+    -webkit-animation-delay: .9s!important;
+    animation-delay: .9s!important;
+}
+
+.slide-btn a:hover {
+    background-color: #3CECFF;
+    -webkit-transition: height 0.3s ease 0s;
+    transition: height 0.3s ease 0s;
+}
+
+.slider .owl-prev,
+.slider .owl-next {
+    background-color: #000;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 15px;
+    height: 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 40px;
+}
+
+.slider .owl-next {
+    left: auto;
+    right: 0;
+}
+
+
+/*---------------------------------------------------
+        2. About area CSS
+---------------------------------------------------*/
+
+#service{
+	overflow: hidden
+}
+.sp30 {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.sp30 h5 {
+    padding: 20px 0 20px;
+}
+
+.expt {
+    padding: 54px;
+}
+
+.about-info a {
+    background: #6dbcdb none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 35px;
+}
+
+.about-menu li {
+    border: 1px solid #00aae8;
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+.catagory {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.catagory p::after {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: 47px;
+    margin: 38px 0;
+    position: absolute;
+    width: 73%;
+}
+
+.catagory h6 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.about-exprt i {
+    color: #6dbcdb;
+    font-size: 80px;
+    margin: 38px;
+}
+
+.about-exprt a {
+    color: #000;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.about-exprt i:hover,
+.about-exprt a:hover {
+    color: #6dbcdb;
+}
+
+.about-exprt {
+    margin: 30px;
+}
+
+
+/*---------------------------------------------------
+        3. ProgressBar CSS
+---------------------------------------------------*/
+
+.meter {
+    background: #ddd none repeat scroll 0 0;
+    border-radius: 25px;
+    padding: 4px;
+}
+
+.meter span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #6DBCDB;
+    -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    height: 30px;
+}
+
+.meter span p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-weight: 700;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.meter span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+
+/*---------------------------------------------------
+        4. Portfolio area CSS
+---------------------------------------------------*/
+
+
+.protfolio-area{
+	overflow: hidden
+}
+.protfolio-txt {
+    background: rgba(0, 0, 0, 0) url("img/pr10.jpg") repeat scroll center center / cover;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 220px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 125px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.protfolio-txt::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.57;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.protfolio-menu {
+    background: #ddd none repeat scroll 0 0;
+}
+
+.protfolio {
+    background: url("img/ipn.jpg");
+}
+
+.protfolio-iso li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.protfolio-iso li:hover {
+    background: #6dbcdb none repeat scroll 0 0;
+    color: #fff;
+}
+
+.pr-img img {
+    height: 300px;
+    padding: 25px 0 0;
+    width: 100%;
+}
+
+.single-portfolio {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden
+}
+
+.single-portfolio img {
+    width: 100%;
+    -webkit-transition: 0.5s ease-in-out 0s;
+    transition: 0.5s ease-in-out 0s;
+    height: 500px;
+}
+
+.p-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    opacity: 0
+}
+
+.single-portfolio:hover .p-hover {
+    opacity: 1
+}
+
+.p-table {
+    width: 100%;
+    height: 100%;
+    display: table
+}
+
+.p-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.zoom {
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px)
+}
+
+.link {
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px)
+}
+
+.single-portfolio:hover .zoom,
+.single-portfolio:hover .link {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.zoom i {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+a.zoom,
+a.link {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 50%
+}
+
+a.zoom:hover,
+a.link:hover {
+    color: #ddd
+}
+
+
+/*---------------------------------------------------
+        5. Testimonial area CSS
+---------------------------------------------------*/
+
+.testimonial-area {
+    padding: 80px;
+}
+
+.test-cntn {
+    border: 3px solid #95a3b2;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 3px;
+    padding: 30px;
+}
+
+.test-cntn:hover {
+    border: 3px solid #67c2f7;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.test-prof i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+
+/*---------------------------------------------------
+        6. Contact area CSS
+---------------------------------------------------*/
+
+.contact-detail span {
+    font-size: 20px;
+    padding: 30px;
+    color: #000;
+}
+
+.contact-detail span a {
+    color: #000
+}
+
+.contact-detail i {
+    border: 4px solid #6DBCDB;
+    border-radius: 50%;
+    font-size: 25px;
+    margin: 17px 0 30px;
+    padding: 20px;
+    color: #6dbcdb;
+}
+
+.contact-detail {}
+
+.contact-detail .skype,
+.email {
+    float: left;
+}
+
+.contact h3 {
+    margin: 34px 0;
+}
+
+.massage-me h3 {
+    margin: 35px 0;
+}
+
+.email a,
+.phone a {
+    color: #000;
+    text-decoration: none;
+}
+
+.email a:hover,
+.contact-detail span a:hover,
+.phone a:hover {
+    color: #6DBCDB
+}
+
+.massage-me textarea {
+    width: 100%;
+    background: #f2f4f5 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 12px;
+}
+
+.massage-me span input {
+    background: #f2f4f5 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    height: 40px;
+    margin: 5px 1px;
+    width: 100%;
+    padding: 6px;
+}
+
+.massage-me input[type="submit"] {
+    background: #6dbcdb none repeat scroll 0 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 21px;
+	border:none;
+    font-weight: 700;
+    height: 50px;
+    margin: 15px 0;
+    width: 140px;
+	transition: all 0.4s ease 0s;
+}
+
+.massage-me input[type="submit"]:hover {
+    background: #FC4349;
+}
+
+.social-icon {
+    margin-top: 150px;
+}
+
+.social-icon i {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    color: #000;
+    font-size: 16px;
+    margin: 3px;
+    padding: 12px;
+}
+
+.social-icon i:hover {
+    background: #00AAE8;
+    color: #fff;
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+}
+
+
+/*---------------------------------------------------
+        7. Footer area CSS
+---------------------------------------------------*/
+
+.footer-area {
+    background: #ffbf89 none repeat scroll 0 0;
+    margin-top: 70px;
+}
+
+.footer-right {
+    float: right;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+}
+
+.footer-left {
+    float: left;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+}
