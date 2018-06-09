@@ -1,25 +1,36 @@
-		</div>
-	</div>
-</div>
-	<!-- Jquery Core Js -->
-	<script src="models/admin/js/jquery.min.js"></script>
-	<!-- Bootstrap Core Js -->
-	<script src="models/admin/js/bootstrap.js"></script>
-	<!-- Select Plugin Js -->
-	<script src="models/admin/js/bootstrap-select.js"></script>
-	<!-- Slimscroll Plugin Js -->
-	<script src="models/admin/js/jquery.slimscroll.js"></script>
-	<!-- Jquery DataTable Plugin Js -->
-	<script src="models/admin/js/datatable/jquery.dataTables.js"></script>
-	<script src="models/admin/js/datatable/dataTables.bootstrap.js"></script>
-	<script src="models/admin/js/datatable/dataTables.buttons.min.js"></script>
-	<script src="models/admin/js/datatable/buttons.html5.min.js"></script>
-	<!-- Custom Js -->
-	<script src="models/admin/js/datatable/jquery-datatable.js"></script>
-	<!-- Demo Js -->
-	<script src="models/admin/js/demo.js"></script>
-	<script src="models/admin/js/index.js"></script>
-	<!-- Only My Js -->
-	<script src="models/admin/js/custom.js"></script>
-	</body>
+ <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 text-center">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="#">Copyright</a></li>
+                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="#">privacy</a></li>
+                                    <li><a href="#">Trems of Service</a></li>
+                                </ul>
+                            </div>
+                            <div class="copyright">
+                                &copy; <a href="">iBiliK </a>iBiliK 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- viewport End -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="models/front/js/jquery-3.2.1.min.js"></script>
+    <script src="models/front/js/popper.min.js"></script>
+    <script src="models/front/js/bootstrap.min.js"></script>
+     <!-- Validation Plugin Js -->
+    <script src="models/front/js/jquery.validate.js"></script>
+    <script src="models/front/js/sign-up.js"></script>
+    <script src="models/front/js/main.js"></script>
+</body>
+
 </html>

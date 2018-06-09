@@ -11,7 +11,7 @@ class Connection{
 	private $password = '';
 	public function __construct(){
 		try{
-			$this->con = new PDO('mysql:host=localhost;dbname=login-reg',$this->user,$this->password);
+			$this->con = new PDO('mysql:host=localhost;dbname=hotel',$this->user,$this->password);
 		}
 		catch (PDOException $e){
 			print "ERROR!: " . $e->getMessage() . "<br \>";

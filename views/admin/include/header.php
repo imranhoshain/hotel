@@ -1,3 +1,10 @@
+<?php
+if ( !isset($_SESSION)){
+session_start();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +13,12 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Welcome To | Admin Panel</title>
         <!-- Base File -->
-        <base href="http://localhost/hotel/"">
+        <base href="http://localhost/hotel/">
+         <?php
+            if (!isset($_SESSION['email'])){
+            echo "<script>  window.location ='views/admin/auth/sign-in.php'</script>";
+            }
+        ?>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <!-- Google Fonts -->
@@ -132,12 +144,12 @@
             <aside id="leftsidebar" class="sidebar">
                 <!-- User Info -->
                 <div class="user-info">
-                    <div class="image">
-                        <img src="models/admin/images/user.png" width="48" height="48" alt="User" />
+                    <div class="image">                        
+                        <img src="models/admin/images/<?php echo ($_SESSION['image']);  ?>" width="48" height="48" alt="User" />
                     </div>
                     <div class="info-container">
-                        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                        <div class="email">john.doe@example.com</div>
+                        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo ($_SESSION['username']); ?></div>
+                        <div class="email"><?php echo ($_SESSION['email']); ?></div>
                         <div class="btn-group user-helper-dropdown">
                             <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                             <ul class="dropdown-menu pull-right">
@@ -147,7 +159,7 @@
                                 <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                                 <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                                 <li role="seperator" class="divider"></li>
-                                <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                                <li><a href="views/admin/auth/sign-out.php"><i class="material-icons">input</i>Sign Out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -175,6 +187,21 @@
                                 </li>
                                 <li>
                                     <a href="views/admin/auth/index.php">Admin List</a>
+                                </li>                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <i class="material-icons">pie_chart</i>
+                                <span>Users Section</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="views/admin/users/register.php">Add Users</a>
+                                </li>
+                                <li>
+                                    <a href="views/admin/users/index.php">Users List</a>
                                 </li>                               
                             </ul>
                         </li>

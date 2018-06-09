@@ -8,8 +8,17 @@ use PDOException;
 class Images extends Connection
 {
 	
-	public function image_upload($file){
-		$file_name = $_FILES[$file]['name'];
-		$tmp_name = $_FILES[$file]['tmp_name'];
-	}
+	public function upload(){
+
+        $img_name = $_FILES['image']['name'];
+        $img_tmp_name = $_FILES['image']['tmp_name'];
+        $genName = substr(md5(uniqid()),0,10);
+        $tmp = explode('.',$img_name);        
+		$extName = end($tmp);
+        $_POST['image']  = $genName.'.'.$extName;
+        move_uploaded_file($img_tmp_name,'../../../models/admin/images/'.$_POST['image']);
+
+        return $_POST['image'];
+
+    }
 }

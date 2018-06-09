@@ -1,9 +1,8 @@
 <?php
-session_start();
 include_once '../include/header.php';
 include_once '../../../vendor/autoload.php';
-$admin = new App\admin\auth\Auth();
-$admins = $admin->index();
+$user = new App\front\auth\Auth();
+$users = $user->index();
 ?>
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -20,20 +19,21 @@ $admins = $admin->index();
                             <th>Serial No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Image</th>
+                            <th>Phone</th>
                             <th>Option</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                             $sl = 1;
-                            foreach ($admins as $admin){
+                            foreach ($users as $user){
                         ?>
                         <tr>
-                            <td><?= $admin['id']?></td>
-                            <td><?= $admin['username']?></td>
-                            <td><?= $admin['email']?></td>
-                            <td><img src="models/admin/images/<?= $admin['image']?>" alt="" style="height: 80px; width: 100%;"></td>
+                            <td><?= $user['id']?></td>
+                            <td><?= $user['name']?></td>
+                            <td><?= $user['email']?></td>
+                            <td>0<?= $user['phone']?></td>
+                            
                             <td class="text-center">                                
 
                             <a href="" class="btn btn-success">view</a>

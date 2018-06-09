@@ -5,7 +5,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Welcome To | Admin Panel</title>
         <!-- Base File -->
-        <base href="http://localhost/hotel/"">
+        <base href="http://localhost/hotel/">
         <!-- Favicon-->
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
         <!-- Google Fonts -->
@@ -40,7 +40,7 @@
                                 <i class="material-icons">person</i>
                             </span>
                             <div class="form-line">
-                                <input type="text" class="form-control" name="user" placeholder="Name Surname" autofocus>
+                                <input type="text" class="form-control" name="username" placeholder="Name Surname" autofocus>
                             </div>
                         </div>
                         <div class="input-group">
@@ -56,7 +56,7 @@
                                 <i class="material-icons">lock</i>
                             </span>
                             <div class="form-line">
-                                <input type="password" class="form-control" name="password" minlength="6" placeholder="Password">
+                                <input type="password" class="form-control" name="password" minlength="6" placeholder="Password" required>
                             </div>
                         </div>
                         <div class="input-group">
@@ -64,7 +64,7 @@
                                 <i class="material-icons">lock</i>
                             </span>
                             <div class="form-line">
-                                <input type="password" class="form-control" name="confirm" minlength="6" placeholder="Confirm Password">
+                                <input type="password" class="form-control" name="confirm" minlength="6" placeholder="Confirm Password" required>
                             </div>
                         </div>
                         <div class="input-group">
@@ -95,11 +95,12 @@
         <!-- Waves Effect Plugin Js -->
         <script src="models/admin/js/waves.js"></script>
         <!-- Validation Plugin Js -->
-        <!-- <script src="models/admin/js/jquery.validate.js"></script> -->
+        <script src="models/admin/js/jquery.validate.js"></script>
         <!-- Custom Js -->
         <script src="models/admin/js/admin.js"></script>
         <!-- <script src="models/admin/js/sign-up.js"></script> -->
         <!-- Only My Js -->
         <script src="models/admin/js/custom.js"></script>
+        <script src="models/admin/js/sign-up.js"></script>
     </body>
 </html>

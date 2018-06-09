@@ -1,3 +1,16 @@
+
+<?php
+if(!isset($_SESSION)){
+    session_start();
+}
+include_once '../../../vendor/autoload.php';
+if(isset($_POST['submit'])){
+    $auth = new \App\admin\auth\Auth();
+    $auth->set($_POST)->login();
+  
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +35,8 @@
         <link href="models/admin/css/style.css" rel="stylesheet">
         
         <!-- Only my Css -->
-        <link href="models/admin/style.css" rel="stylesheet">
+        <link href="models/admin/style.css" rel="stylesheet">    
+                    
         
     </head>
     <body class="login-page">
@@ -33,14 +47,14 @@
             </div>
             <div class="card">
                 <div class="body">
-                    <form id="sign_in" method="POST">
+                    <form id="sign_in" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                         <div class="msg">Sign in to start your session</div>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="material-icons">person</i>
                             </span>
                             <div class="form-line">
-                                <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+                                <input type="text" class="form-control" name="email" placeholder="Email" required autofocus>
                             </div>
                         </div>
                         <div class="input-group">
@@ -52,12 +66,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-8 p-t-5">
+                             <div class="col-xs-8 p-t-5">
                                 <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
                                 <label for="rememberme">Remember Me</label>
-                            </div>
+                            </div> 
                             <div class="col-xs-4">
-                                <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                                <button class="btn btn-block bg-pink waves-effect" name="submit" type="submit">SIGN IN</button>
                             </div>
                         </div>
                         <div class="row m-t-15 m-b--20">
