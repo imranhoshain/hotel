@@ -25,6 +25,10 @@
                     <label for="exampleInputPassword1">Password</label>
                      <input type="password" class="form-control" name="password" minlength="6" placeholder="Password" required>
                 </div>
+                
+                     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+                      <script>tinymce.init({ selector:'textarea' });</script>
+                        <textarea name="editor" id="editor"></textarea>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Confirm</label>
                     <input type="password" class="form-control" name="confirm" minlength="6" placeholder="Confirm Password" required>
