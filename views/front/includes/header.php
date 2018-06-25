@@ -37,6 +37,8 @@ if(!isset($_SESSION)){
                         <ul>
                             <li><a href="views/front/auth/login.php">Longin</a></li>
                             <li><a href="views/front/auth/register.php">Register</a></li>
+                            <li><a href="views/front/auth/index.php">Deshbord</a></li>
+                            <li><a href="views/front/auth/logout.php">Logout</a></li>
                         </ul>
                         <div class="country-btn">
                             <div class="dropdown">
