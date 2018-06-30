@@ -1,8 +1,8 @@
 <?php
 if(!isset($_SESSION)){
     session_start();
-}
 
+}
 ?>
 
 
@@ -14,7 +14,7 @@ if(!isset($_SESSION)){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hotel project</title>
     <!-- Base File -->
-    <base href="http://localhost/hotel/">
+    <base href="http://localhost/hotel/">    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="models/front/css/bootstrap.min.css">
     <link rel="stylesheet" href="models/front/css/font-awesome.min.css">
@@ -35,10 +35,13 @@ if(!isset($_SESSION)){
                     </div>
                     <div class="main-menu">
                         <ul>
+                            <?php if (!$_SESSION == TRUE){?>
                             <li><a href="views/front/auth/login.php">Longin</a></li>
                             <li><a href="views/front/auth/register.php">Register</a></li>
+                        <?php }else{?>
                             <li><a href="views/front/auth/index.php">Deshbord</a></li>
                             <li><a href="views/front/auth/logout.php">Logout</a></li>
+                             <?php }?>
                         </ul>
                         <div class="country-btn">
                             <div class="dropdown">

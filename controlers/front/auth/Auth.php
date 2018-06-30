@@ -101,6 +101,7 @@ class Auth extends Connection
             if(!empty($users['id'])){
 
                 $_SESSION['email'] = $users['email'];
+                $_SESSION['phone'] = $users['email'];
 
                 header('location: ../../../views/front/auth/index.php');
             }

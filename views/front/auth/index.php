@@ -1,7 +1,9 @@
 <?php
-    include_once '../includes/header.php'
-?>
-
+    include_once '../includes/header.php';    
+        if (!isset($_SESSION['email'])){
+        echo "<script>  window.location ='views/front/auth/login.php'</script>";
+        }
+ ?>
 
             <div class="container">
                 <div class="row">
