@@ -104,9 +104,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facilis tempora alias voluptate tenetur eos numquam repellat illo nisi aliquid! Possimus esse quaerat, dicta temporibus autem illum, nostrum repudiandae beatae similique libero officia natus magni dolore. Explicabo quos perspiciatis, sequi id eligendi quae nihil asperiores expedita blanditiis velit, accusantium perferendis.</p>
                 </div>
                 <div class="free-content-right">
-                    <h5><a href="signup.html"> Register </a>Now!</h5>
+                    <h5><a href="signup.php"> Register </a>Now!</h5>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <h6>Or<a href="login.html"> Login </a>to your account</h6>
+                    <h6>Or<a href="login.php"> Login </a>to your account</h6>
                 </div>
             </div>
         </div>

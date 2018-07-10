@@ -5,10 +5,10 @@
                             <div class="footer-menu">
                                 <ul>
                                     <li><a href="#">Blog</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="#">Copyright</a></li>
+                                    <li><a href="views/front/pages/contact.php">Contact Us</a></li>
+                                    <li><a href="views/front/pages/copyright.php">Copyright</a></li>
                                     <li><a href="#">Jobs</a></li>
-                                    <li><a href="#">privacy</a></li>
+                                    <li><a href="views/front/pages/privacy.php">privacy</a></li>
                                     <li><a href="#">Trems of Service</a></li>
                                 </ul>
                             </div>
